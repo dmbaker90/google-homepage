@@ -1,10 +1,201 @@
 <!DOCTYPE html>
-<head>
+<style>
+    body {
+        font-size: 14px;
+        margin: unset;
+        font-family: arial;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px;
+        height: 60px;
+    }
+    .header .header-left {
+        margin-left: 10px;
+    }
+    .header .header-right {
+        display: flex;
+        align-items: center;
+    }
+    a {
+        padding: 5px;
+        color: black;
+        margin: 0 5px;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .dot-img {
+        padding: 8px;
+        height: 25px;
+        width: 25px;
+    }
+    .dot-img:hover {
+        background-color: lightgray;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .user-img {
+        height: 30px;
+        width: 30px;
+    }
+    .user-img img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 50%;
+    }
+    .user-img img:hover {
+        cursor: pointer;
+        /* border: 3px solid lightgray; */
+        
+    }
+    .search {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .google-logo {
+        height: 100px;
+        text-align: center;
+    }
+    .google-logo img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .main__input {
+        margin-top: 30px;
+        position: relative;
+    }
+    .main__form {
+        max-width: 584px;
+        margin: 0 auto;
+    }
+    .form__group {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 44px;
+        width: 100%;
+        border: 1px solid #dfe1e5;
+        border-radius: 24px;
+        padding: 5px 8px 0 16px;
+    }
+    .form__logo--search {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -5px;
+        margin-right: 7px;
+    }
+    .form__logo--search svg {
+        height: 20px;
+        width: 20px;
+        fill: lightgray;
+    }
+    .form__input {
+        height: 100%;
+        flex: 1;
+    }
+    .form__input input {
+        border: none;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        margin-top: -3px;
+        color: #101010;
+    }
+    .form__group:hover {
+        box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+        border-color: rgba(223, 225, 229, 0);
+    }
+    .form__input input:focus {
+        outline: none;
+    }
 
+    .buttons {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    button {
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        background-color: #F8F9FA;
+    }
+    button:hover {
+        border: 2px solid lightgray;
+        background-color: #F8F9FA;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        background: #F2F2F2;
+        padding: 10px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    footer a {
+        color: #5f6368;
+    }
+</style>
+<head>
 </head>
 <body>
-    <img src="assets/google-logo.png" alt="Google-logo"/>
-</body>
-<footer>
+    <div class="header">
+        <div class="header-left">
+            <a href="#">About</a>
+            <a href="#">Store</a>
+        </div>
+        <div class="header-right">
+            <a href="#">Gmail</a>
+            <a href="#">Images</a>
+            <div class="dot-img">
+                <svg class="gb_Xe" focusable="false" viewBox="0 0 24 24"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
+            </div>
+            <div class="user-img">
+                <img src="assets/user.jpg" alt="user-image"/>
+            </div>
+        </div>
+    </div>
+    <div class="google-logo">
+        <img src="assets/google-logo.png" alt="Google-logo"/>
+    </div>
 
-</footer>
+    <div class="main__input">
+        <form class="main__form">
+            <div class="form__group">
+                <div class="form__logo--search">
+                    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+                </div>
+                <div class="form__input">
+                    <input type="text" name="search" id="search">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="buttons">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button>
+    </div>
+    <footer>
+        <div class="left-footer">
+            <a href="#">Advertising</a>
+            <a href="#">Business</a>
+            <a href="#">How Search Works</a>
+        </div>
+        <div class="right-footer">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Settings</a>
+        </div>
+    </footer>
+</body>
